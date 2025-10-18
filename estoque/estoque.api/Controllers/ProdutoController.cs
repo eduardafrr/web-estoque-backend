@@ -47,7 +47,6 @@ namespace estoque.api.Controllers
             var existente = await _produtoRepositorio.ObterProdutoPorIdAsync(id);
             if (existente == null) return NotFound();
 
-            // Opcional: copiar campos necessários — aqui atualizamos diretamente
             await _produtoRepositorio.AtualizarProdutoAsync(produto);
             return NoContent();
         }
