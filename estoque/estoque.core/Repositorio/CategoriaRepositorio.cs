@@ -1,7 +1,7 @@
 ﻿using estoque.core.Categoria.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace estoque.core.Categoria.Repositorio
+namespace estoque.core.Repositorio
 {
     public class CategoriaRepositorio(CategoriaContext categoriaContext)
     {

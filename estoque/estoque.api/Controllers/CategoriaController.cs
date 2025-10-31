@@ -1,5 +1,5 @@
 ﻿using estoque.core.Categoria.Model;
-using estoque.core.Categoria.Repositorio;
+using estoque.core.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 
 namespace estoque.api.Controllers
