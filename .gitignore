@@ -54,5 +54,5 @@ TestResult.xml
 nunit-*.xml
 /estoque/.vs/estoque
 /estoque/.vs/ProjectEvaluation
-appsettings.Development.json
+/estoque/estoque.api/appsettings.Development.json
 /estoque/estoque.api/appsettings.Development.json
