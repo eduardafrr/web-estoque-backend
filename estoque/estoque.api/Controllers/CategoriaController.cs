@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace estoque.api.Controllers
 {
     [ApiController]
-    [Route("categorias")]
+    [Route("categoria")]
     public class CategoriaController : Controller
     {
         private readonly CategoriaRepositorio _categoriaRepositorio;
@@ -30,7 +30,7 @@ namespace estoque.api.Controllers
             return Ok(categoria);
         }
 
-        [HttpPost]
+        [HttpPost("novo")]
         public async Task<ActionResult<CategoriaModel>> Create([FromBody] CategoriaModel categoria)
         {
             categoria.Id = categoria.Id == Guid.Empty ? Guid.NewGuid() : categoria.Id;

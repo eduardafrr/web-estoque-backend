@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace estoque.api.Controllers
 {
     [ApiController]
-    [Route("produtos")]
+    [Route("produto")]
     public class ProdutoController : Controller
     {
         private readonly ProdutoRepositorio _produtoRepositorio;
@@ -30,7 +30,7 @@ namespace estoque.api.Controllers
             return Ok(produto);
         }
 
-        [HttpPost]
+        [HttpPost("novo")]
         public async Task<ActionResult<ProdutoModel>> Create([FromBody] ProdutoModel produto)
         {
             produto.Id = produto.Id == Guid.Empty ? Guid.NewGuid() : produto.Id;
@@ -38,7 +38,6 @@ namespace estoque.api.Controllers
             return CreatedAtAction(nameof(GetById), new { id = produto.Id }, produto);
         }
 
-        // PUT: api/produto/{id}
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> Update(Guid id, [FromBody] ProdutoModel produto)
         {
